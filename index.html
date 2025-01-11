@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Book</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="navbar">
+        <h1>Recipe Book</h1>    
+    </div>
+    <div class="search-bar">
+        <label class="label-search" for="id1">Search :</label>
+        <input type="search" id="id1" class="search" placeholder="Search Recipes .....">
+        <button class="search-btn">Search</button>
+    </div>
+    <div id="search-results" class="search-results">
+        <!-- Search results will be displayed here -->
+    </div>
+    
+    <br>
+    <div class="co-nav-bar">
+        <h2>Add Recipe</h2>
+    </div>
+    <br>
+    <div class="name-bar">
+        <label class="label-name" for="id2">Name :</label>
+        <input type="text" id="id2" class="name" placeholder="Enter Recipe Name ....">
+    </div>
+    <br>
+    <div class="Ingredient-bar">
+        <label class="label-ingredients" for="id3">Ingredients :</label>
+        <textarea rows="3" cols="65" id="id3" class="ingredients" placeholder="Ingredients ....."></textarea>
+    </div>
+    <br>
+    <div class="step-bar">
+        <label class="label-steps" for="id4">Steps :</label>
+        <textarea rows="5" cols="65" id="id4" class="steps" placeholder="Steps ....."></textarea>
+    </div>
+    <br>
+    <div class="file-bar">
+    <label class="label-file" for="id5">File :</label>
+    <input type="file" id="id5" class="file">
+</div>
+<br>
+<div class="button-bar">
+    <input type="submit" class="submit">
+</div>
+<br><br><br>
+
+<script src="script.js"></script>
+</body>
+</html>

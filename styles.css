@@ -1,0 +1,262 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin-top: 40px;
+    background-image: url(1recipe);
+    background-size: cover;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    height: 60px;
+    background-color: rgb(144, 126, 91);
+    align-items: center;
+    justify-content: center;
+    margin: 5px auto;
+    border-radius: 20px;
+    color: white;
+    max-width: 90%;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 90%;
+}
+
+.label-search {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.8rem;
+    margin-right: 20px;
+}
+
+.search {
+    width: 100%;
+    max-width: 620px;
+    height: 40px;
+    border-radius: 4px;
+    margin-right: 20px;
+}
+
+.search-btn {
+    height: 35px;
+    border-radius: 8px;
+}
+
+.search-btn:hover {
+    background-color: #ff7a2a;
+}
+
+.search:hover {
+    background-color: whitesmoke;
+}
+
+.co-nav-bar {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px auto;
+    border-radius: 15px;
+    background-color: rgb(254, 236, 147);
+    color: brown;
+    text-decoration: underline;
+    max-width: 70%;
+}
+
+.name-bar, .Ingredient-bar, .step-bar, .file-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px auto;
+    max-width: 90%;
+}
+
+.label-name, .label-ingredients, .label-steps, .label-file {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.2rem;
+    margin-right: 20px;
+}
+
+.name, .ingredients, .steps {
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+    border-radius: 4px;
+    margin-right: 20px;
+}
+
+.ingredients {
+    height: 45px;
+}
+
+.steps {
+    height: 75px;
+}
+
+.file {
+    border: none;
+    padding: 5px;
+    background-color: #ffecd2;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.file:hover {
+    background-color: #ffdecf;
+}
+
+.submit-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+}
+
+.submit {
+    height: 35px;
+    background-color: white;
+    border-radius: 8px;
+    margin-left: 525px;
+}
+
+.submit:hover {
+    background-color: whitesmoke;
+}
+
+/* General Styles for All Inputs and Textareas */
+.search, .name, .ingredients, .steps, .file {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search:focus, .name:focus, .ingredients:focus, .steps:focus, .file:focus {
+    border-color: #ff914d; /* Highlight color on focus */
+    box-shadow: 0 4px 8px rgba(255, 145, 77, 0.3);
+    outline: none;
+}
+
+/* Placeholder Styling */
+.search::placeholder, .name::placeholder, .ingredients::placeholder, .steps::placeholder {
+    font-style: italic;
+    color: #bbb;
+}
+
+.search:focus::placeholder, .name:focus::placeholder, .ingredients:focus::placeholder, .steps:focus::placeholder {
+    color: transparent;
+}
+
+/* Hover Effects */
+.search:hover, .name:hover, .ingredients:hover, .steps:hover, .file:hover {
+    background-color: #f0f0f0;
+}
+
+/* Specific Search Input Style */
+.search {
+    padding-left: 40px; /* Space for icon */
+    position: relative;
+}
+
+.search::before {
+    content: '🔍'; /* Optional search icon */
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    color: #aaa;
+}
+
+/* Button Styles */
+button, .submit {
+    background-color: #ff914d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button:hover, .submit:hover {
+    background-color: #ff7a2a; /* Darker orange */
+    box-shadow: 0 4px 8px rgba(255, 122, 42, 0.3);
+    transform: translateY(-2px);
+}
+
+button:active, .submit:active {
+    background-color: #e36f24; /* Even darker orange */
+    transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        margin: 10px;
+        height: auto;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .search-bar {
+        flex-direction: column;
+    }
+
+    .search {
+        margin-bottom: 10px;
+    }
+
+    .co-nav-bar {
+        font-size: 1.2rem;
+    }
+
+    .name, .ingredients, .steps {
+        max-width: 100%;
+    }
+
+    .submit {
+        margin-left: 0;
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        font-size: 1rem;
+    }
+
+    .label-search, .label-name, .label-ingredients, .label-steps, .label-file {
+        font-size: 1rem;
+    }
+
+    .search, .name, .ingredients, .steps {
+        font-size: 0.9rem;
+    }
+
+    .submit {
+        font-size: 0.9rem;
+    }
+}
+
+.file-bar{
+    width: 100%;
+    max-width: 600px;
+    justify-content: left;
+}
